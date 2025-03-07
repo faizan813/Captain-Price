@@ -12,17 +12,17 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+API_ID = int(environ['22805894'])
+API_HASH = environ['4252e0c226a61540c4fb90d71fbd8f99']
+BOT_TOKEN = environ['7632806198:AAFo5iApBMCV4G5gXGeMEu3ONsdVIXVv1bc']
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ['ADMINS'].split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ['CHANNELS'].split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ['6913760468'].split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ['-1002346089650'].split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
@@ -30,15 +30,14 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
 TUTORIAL = "t.me/MainlandGroup_CC"
 # MongoDB information
-DATABASE_URI = environ['DATABASE_URI']
-DATABASE_NAME = environ['DATABASE_NAME']
+DATABASE_URI = environ['mongodb+srv://faizan:faizankhan786@faizan.acoew.mongodb.net/?retryWrites=true&w=majority&appName=Faizan']
+DATABASE_NAME = environ['Faizan']
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
 default_start_msg = """
-**Hi, I'm Jely Been Clone Bot you can call me as Jely Been **
-Here you can search files in Inline mode as well as PM, Use the below buttons to search files or send me the name of file to search.
-"""
+**Hi, I'm movies4ubot I'm made to give you latest movies and webseries so if you want movies and webseries so join our telegram group link given below 👇
+https://t.me/movies4u_group
 START_MSG = environ.get('START_MSG', default_start_msg)
 
 # caption
